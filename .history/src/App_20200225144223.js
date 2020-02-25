@@ -17,8 +17,6 @@ class App extends Component {
     }
   }
 
-onInputChange = (event) => console.log(event)
-
   render(){
     return (
       <div className="App">
@@ -28,7 +26,7 @@ onInputChange = (event) => console.log(event)
         <Navigation/>  
         <Logo/>
         <Rank/>
-        <ImageLinkForm onInputChange={this.onInputChange}/>
+        <ImageLinkForm/>
         {/*<FaceRecognition/>} */}
       </div>
     );

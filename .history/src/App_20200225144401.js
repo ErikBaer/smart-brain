@@ -28,7 +28,7 @@ onInputChange = (event) => console.log(event)
         <Navigation/>  
         <Logo/>
         <Rank/>
-        <ImageLinkForm onInputChange={this.onInputChange}/>
+        <ImageLinkForm/>
         {/*<FaceRecognition/>} */}
       </div>
     );
