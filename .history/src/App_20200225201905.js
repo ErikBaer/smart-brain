@@ -37,9 +37,7 @@ class App extends Component {
     }
   }
 
-displayBox = (box) => {
-  this.setState({box:box})
-}
+displayBox 
 
 
 onInputChange = (event) => {
@@ -52,7 +50,7 @@ onButtonSubmit = () => {
 
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
-  .then(response => this.displayBox(this.calculateFaceLocation(response)))
+  .then(response => this.calculateFaceLocation(response))
   .catch(err => console.log(err, 'OOps'))
   console.log('click')
 } ;
