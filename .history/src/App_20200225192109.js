@@ -50,9 +50,7 @@ onButtonSubmit = () => {
         <Navigation/>  
         <Logo/>
         <Rank/>
-        <ImageLinkForm onInputChange={this.onInputChange} 
-                      onButtonSubmit={this.onButtonSubmit} 
-                      imageUrl={this.state.imageUrl}/>
+        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
         <FaceRecognition/>
       </div>
     );

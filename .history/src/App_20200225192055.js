@@ -26,7 +26,7 @@ onInputChange = (event) => console.log(event.target.value)
 
 onButtonSubmit = () => {
   
-  this.setState({imageUrl:this.state.input})
+  this.setState({imageUrl=this.state.input})
 
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   "https://samples.clarifai.com/face-det.jpg")
@@ -50,9 +50,7 @@ onButtonSubmit = () => {
         <Navigation/>  
         <Logo/>
         <Rank/>
-        <ImageLinkForm onInputChange={this.onInputChange} 
-                      onButtonSubmit={this.onButtonSubmit} 
-                      imageUrl={this.state.imageUrl}/>
+        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
         <FaceRecognition/>
       </div>
     );
