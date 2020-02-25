@@ -19,8 +19,6 @@ class App extends Component {
 
 onInputChange = (event) => console.log(event.target.value)
 
-onSubmit = () => console.log('click')
-
   render(){
     return (
       <div className="App">
