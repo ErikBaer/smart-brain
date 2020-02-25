@@ -7,25 +7,20 @@ import Rank from './components/Rank/Rank';
 import Particles from 'react-particles-js';
 
 
-const particlesOptions = {
-    particles: {
-      line_linked: {
-        shadow: {
-          enable: true,
-          color: "#3CA9D1",
-          blur: 5
-        }
-      }
-    }
-  }
-
-
-
 function App() {
   return (
     <div className="App">
       <Particles
-        params = {{particlesOptions}}
+        params={{
+                    polygon: {
+                        enable: true,
+                        type: 'inside',
+                        move: {
+                            radius: 10
+                        },
+                        url: 'path/to/svg.svg'
+                    }
+                }} 
       />
       <Navigation/>  
       <Logo/>
