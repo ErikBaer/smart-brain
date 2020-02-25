@@ -38,10 +38,13 @@ onButtonSubmit = () => {
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
   .then(
-    (response) => this.calculateFaceLocation(response)
-  .catch(err => console.log(err))
-    
-    
+    function(response) {
+      this.calculateFaceLocation();
+     console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+    },
+    function(err) {
+      console.log('Ooops',err)
+    }
   );
   console.log('click')
 } ;

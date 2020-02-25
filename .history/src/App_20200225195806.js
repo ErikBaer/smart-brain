@@ -23,9 +23,7 @@ class App extends Component {
     }
   }
 
-  calculateFaceLocation = (data) => {
-  //   response.outputs[0].data.regions[0].region_info.bounding_box
-  }
+  calculate
 
 onInputChange = (event) => {
   this.setState({input: event.target.value})
@@ -38,10 +36,12 @@ onButtonSubmit = () => {
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
   .then(
-    (response) => this.calculateFaceLocation(response)
-  .catch(err => console.log(err))
-    
-    
+    function(response) {
+     console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+    },
+    function(err) {
+      console.log('Ooops',err)
+    }
   );
   console.log('click')
 } ;
