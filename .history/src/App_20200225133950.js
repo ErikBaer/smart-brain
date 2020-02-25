@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Particles className="particles"
-      params={particlesOptions}
+        params= {{particlesOptions}}
       />
       <Navigation/>  
       <Logo/>

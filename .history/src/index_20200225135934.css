@@ -5,8 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(https://www.nasa.gov/centers/goddard/images/content/147929main_SpeedyFlaresLG.jpg);
-  background:cover cover no-repeat;
+  background: url(https://www.nasa.gov/centers/goddard/images/content/147929main_SpeedyFlaresLG.jpg) cover cover no-repeat;
 }
 
 button {

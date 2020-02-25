@@ -13,7 +13,17 @@ function App() {
   return (
     <div className="App">
       <Particles className="particles"
-      params={particlesOptions}
+      params={{
+            		particles: {
+            			line_linked: {
+            				shadow: {
+            					enable: true,
+            					color: "#3CA9D1",
+            					blur: 5
+            				}
+            			}
+            		}
+            	}}
       />
       <Navigation/>  
       <Logo/>
