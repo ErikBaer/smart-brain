@@ -54,8 +54,8 @@ onButtonSubmit = () => {
         <Rank/>
         <ImageLinkForm onInputChange={this.onInputChange} 
                       onButtonSubmit={this.onButtonSubmit} 
-                      />
-        <FaceRecognition imageUrl={this.state.imageUrl}/>
+                      imageUrl={'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80'}/>
+        <FaceRecognition/>
       </div>
     );
   }

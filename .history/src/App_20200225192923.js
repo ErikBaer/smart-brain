@@ -18,12 +18,12 @@ class App extends Component {
     super();
     this.state = {
       input:'',
-      imageUrl:'https://samples.clarifai.com/face-det.jpg',
+      imageUrl:'https://samples.clarifai.com/face-det.jpg'
     }
   }
 
 onInputChange = (event) => {
-  this.setState({input: event.target.value})
+  this.setState(this.state.input: event.target.value)
   }
 
 onButtonSubmit = () => {
@@ -31,7 +31,7 @@ onButtonSubmit = () => {
   this.setState({imageUrl:this.state.input});
 
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
-  this.state.input)
+  "https://samples.clarifai.com/face-det.jpg")
   .then(
     function(response) {
      console.log(response)
@@ -54,8 +54,8 @@ onButtonSubmit = () => {
         <Rank/>
         <ImageLinkForm onInputChange={this.onInputChange} 
                       onButtonSubmit={this.onButtonSubmit} 
-                      />
-        <FaceRecognition imageUrl={this.state.imageUrl}/>
+                      imageUrl={this.state.imageUrl}/>
+        <FaceRecognition/>
       </div>
     );
   }

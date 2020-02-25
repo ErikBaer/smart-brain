@@ -18,7 +18,7 @@ class App extends Component {
     super();
     this.state = {
       input:'',
-      imageUrl:'https://samples.clarifai.com/face-det.jpg',
+      imageUrl:'https://samples.clarifai.com/face-det.jpg'
     }
   }
 
@@ -54,8 +54,8 @@ onButtonSubmit = () => {
         <Rank/>
         <ImageLinkForm onInputChange={this.onInputChange} 
                       onButtonSubmit={this.onButtonSubmit} 
-                      />
-        <FaceRecognition imageUrl={this.state.imageUrl}/>
+                      imageUrl={this.state.imageUrl}/>
+        <FaceRecognition/>
       </div>
     );
   }

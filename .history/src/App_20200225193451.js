@@ -55,7 +55,7 @@ onButtonSubmit = () => {
         <ImageLinkForm onInputChange={this.onInputChange} 
                       onButtonSubmit={this.onButtonSubmit} 
                       />
-        <FaceRecognition imageUrl={this.state.imageUrl}/>
+        <FaceRecognition imageUrl={'this.state.imageUrl'}/>
       </div>
     );
   }
