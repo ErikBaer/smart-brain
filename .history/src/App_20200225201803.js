@@ -32,7 +32,7 @@ class App extends Component {
     return {
       leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
-      rightCol: width - (clarifaiFace.rightCol * width),
+      rightCol: width - (clarifaiFace.rightCol * width)
       bottomRow: height - (clarifaiFace.bottom_row * height) 
     }
   }
