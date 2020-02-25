@@ -22,17 +22,7 @@ class App extends Component {
 
 onInputChange = (event) => console.log(event.target.value)
 
-onButtonSubmit = () => {
-  app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
-    function(response) {
-     console.log(response)
-    },
-    function(err) {
-      // there was an error
-    }
-  );
-  console.log('click')
-} ;
+onButtonSubmit = () => console.log('click');
 
   render(){
     return (

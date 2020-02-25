@@ -23,9 +23,9 @@ class App extends Component {
 onInputChange = (event) => console.log(event.target.value)
 
 onButtonSubmit = () => {
-  app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
+  app.models.predict("f7738781c1e0443593a11eec5113e608", "https://cdn.vox-cdn.com/thumbor/GAI9xVQtPBrX2TZSCtwV5mVIWeg=/0x0:5568x3712/920x613/filters:focal(2858x720:3748x1610):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/62207705/922984782.jpg.0.jpg).then(
     function(response) {
-     console.log(response)
+      // do something with response
     },
     function(err) {
       // there was an error

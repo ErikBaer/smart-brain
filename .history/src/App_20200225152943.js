@@ -23,12 +23,15 @@ class App extends Component {
 onInputChange = (event) => console.log(event.target.value)
 
 onButtonSubmit = () => {
-  app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
+  app.models
+  .predict(Clarifai.FACE_DETECT_MODEL, 
+    "https://www.aconsciousrethink.com/wp-content/uploads/2019/11/put-others-down-702x336.jpgaconsciousrethink.com/12254/people-who-put-others-down/")
+    .then(
     function(response) {
      console.log(response)
     },
     function(err) {
-      // there was an error
+      console.log('Oops - Error')
     }
   );
   console.log('click')
