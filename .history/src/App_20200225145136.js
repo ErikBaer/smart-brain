@@ -30,7 +30,7 @@ onButtonSubmit = () => console.log('click');
         <Navigation/>  
         <Logo/>
         <Rank/>
-        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
+        <ImageLinkForm onInputChange={this.onInputChange} onButton/>
         {/*<FaceRecognition/>} */}
       </div>
     );
