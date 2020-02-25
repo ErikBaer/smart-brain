@@ -42,7 +42,7 @@ onButtonSubmit = () => {
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
   .then(response => this.calculateFaceLocation(response))
-  .catch(err => console.log(err, 'OOps'))
+  .catch(err => console.log(err))
   console.log('click')
 } ;
 
