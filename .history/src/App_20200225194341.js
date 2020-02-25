@@ -34,7 +34,7 @@ onButtonSubmit = () => {
   this.state.input)
   .then(
     function(response) {
-     console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+     console.log(response.outputs[0].data.regions[0].region_info)
     },
     function(err) {
       console.log('Ooops',err)

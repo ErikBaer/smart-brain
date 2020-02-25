@@ -30,11 +30,11 @@ onButtonSubmit = () => {
   
   this.setState({imageUrl:this.state.input});
 
-  app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
+  app.models.predict('FACE_DETECT_MODEL', 
   this.state.input)
   .then(
     function(response) {
-     console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
+     console.log(response)
     },
     function(err) {
       console.log('Ooops',err)
