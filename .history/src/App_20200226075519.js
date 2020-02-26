@@ -48,7 +48,7 @@ onInputChange = (event) => {
   this.setState({input: event.target.value})
   }
 
-onRouteChange = (route) => {
+onRouteChange = () => {
   this.setState({route: route})
 }
 

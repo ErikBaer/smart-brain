@@ -48,8 +48,8 @@ onInputChange = (event) => {
   this.setState({input: event.target.value})
   }
 
-onRouteChange = (route) => {
-  this.setState({route: route})
+onRouteChange = () => {
+  this.setState({route: 'home'})
 }
 
 onButtonSubmit = () => {
