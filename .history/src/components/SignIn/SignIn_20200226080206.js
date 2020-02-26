@@ -14,10 +14,12 @@ const SignIn = ({onRouteChange}) => {
               </div>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" for="email-address">Password</label>
-                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="Password"  id="password"/>
-              </div> 
+                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address"/>
+              </div>
+              
+              
             </fieldset>
-            <div>
+            <div className="">
               <input 
               onClick={() => onRouteChange('home')}
               className="b ph3 pv2 input-reset ba b--black bg-light-red grow pointer f6 dib" type="submit" value="Sign in"/>
