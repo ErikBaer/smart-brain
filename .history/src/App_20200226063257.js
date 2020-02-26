@@ -49,7 +49,7 @@ onInputChange = (event) => {
   }
 
 onRouteChange = () => {
-  this.setState({route: 'home'})
+  this.setState({route: 'homepage'})
 }
 
 onButtonSubmit = () => {

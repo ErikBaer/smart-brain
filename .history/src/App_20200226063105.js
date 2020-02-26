@@ -48,13 +48,12 @@ onInputChange = (event) => {
   this.setState({input: event.target.value})
   }
 
-onRouteChange = () => {
-  this.setState({route: 'home'})
-}
-
 onButtonSubmit = () => {
   
   this.setState({imageUrl:this.state.input});
+  onRouteChange = () => {
+    this.setState({route: 'homepage'})
+  }
 
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
