@@ -73,14 +73,14 @@ onButtonSubmit = () => {
 } ;
 
   render(){
-    const {box,imageUrl, route, isSignedIn} = this.state;
+    const {box,imageUrl, isSignedIn} = this.state;
     return (
       <div className="App">
         <Particles className="particles"
         params={particlesOptions}
         />
         <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
-        {route === 'home'
+        {this.state.route === 'home'
         ? <div>
             <Logo/>
             <Rank/>
@@ -90,7 +90,7 @@ onButtonSubmit = () => {
             <FaceRecognition box={box} imageUrl={imageUrl}/>
           </div>
           : (
-            route === 'signin'
+            this.state.route === 'signin'
             ? <SignIn onRouteChange={this.onRouteChange}/>        
             : <Register onRouteChange= {this.onRouteChange}/>
           )

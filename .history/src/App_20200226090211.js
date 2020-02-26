@@ -23,7 +23,7 @@ class App extends Component {
       imageUrl:'http://de.web.img2.acsta.net/r_1280_720/pictures/15/07/29/10/15/520696.jpg',
       box:{},
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: 'false'
     }
   }
 
@@ -41,6 +41,7 @@ class App extends Component {
   }
 
 displayBox = (box) => {
+  console.log(box)
   this.setState({box:box});
 }
 
@@ -50,14 +51,12 @@ onInputChange = (event) => {
   }
 
 onRouteChange = (route) => {
-  if (route==='signout') {
-    this.setState({isSignedIn:false})
-  } else if (route === 'home') {
-    this.setState({isSignedIn: true})
+  this.setState({route: route})
+  console.log('click route')
+  if (route==='home') {
+    this.setState({isSignedIn:'true'})
   }
-  this.setState({route:route})
 }
-
 
 onButtonSubmit = () => {
   
@@ -73,14 +72,14 @@ onButtonSubmit = () => {
 } ;
 
   render(){
-    const {box,imageUrl, route, isSignedIn} = this.state;
+    const {box,imageUrl} = this.state;
     return (
       <div className="App">
         <Particles className="particles"
         params={particlesOptions}
         />
-        <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn}/>
-        {route === 'home'
+        <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.isSignedIn}/>
+        {this.state.route === 'home'
         ? <div>
             <Logo/>
             <Rank/>
@@ -90,7 +89,7 @@ onButtonSubmit = () => {
             <FaceRecognition box={box} imageUrl={imageUrl}/>
           </div>
           : (
-            route === 'signin'
+            this.state.route === 'signin'
             ? <SignIn onRouteChange={this.onRouteChange}/>        
             : <Register onRouteChange= {this.onRouteChange}/>
           )
