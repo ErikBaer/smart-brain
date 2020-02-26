@@ -67,10 +67,8 @@ onButtonSubmit = () => {
         <Particles className="particles"
         params={particlesOptions}
         />
-        <Navigation/> 
-        <SignIn/>
-
-           <Logo/>
+        <Navigation/>  
+        <Logo/>
         <Rank/>
         <ImageLinkForm onInputChange={this.onInputChange} 
                       onButtonSubmit={this.onButtonSubmit} 
