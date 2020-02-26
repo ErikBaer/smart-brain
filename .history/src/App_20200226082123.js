@@ -51,7 +51,6 @@ onInputChange = (event) => {
 
 onRouteChange = (route) => {
   this.setState({route: route})
-  console.log('click route')
 }
 
 onButtonSubmit = () => {
@@ -75,7 +74,7 @@ onButtonSubmit = () => {
         params={particlesOptions}
         />
         <Navigation onRouteChange={this.onRouteChange}/>
-        {this.state.route === 'home'
+        {this.state.route === 'home'}
         ? <div>
             <Logo/>
             <Rank/>
@@ -85,11 +84,10 @@ onButtonSubmit = () => {
             <FaceRecognition box={box} imageUrl={imageUrl}/>
           </div>
           : (
-            this.state.route === 'signin'
-            ? <SignIn onRouteChange={this.onRouteChange}/>        
-            : <Register onRouteChange= {this.onRouteChange}/>
+            {this.state.route === 'signIn'}?
+          <SignIn onRouteChange={this.onRouteChange}/>        
+          : <Register onRouteChange= {this.onRouteChange}/>
           )
-        }
       </div>
     );
   }

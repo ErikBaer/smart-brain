@@ -51,7 +51,6 @@ onInputChange = (event) => {
 
 onRouteChange = (route) => {
   this.setState({route: route})
-  console.log('click route')
 }
 
 onButtonSubmit = () => {
