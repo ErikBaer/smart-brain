@@ -21,7 +21,7 @@ class App extends Component {
       input:'',
       imageUrl:'http://de.web.img2.acsta.net/r_1280_720/pictures/15/07/29/10/15/520696.jpg',
       box:{},
-      route: 'signin'
+      route: 'signIn'
     }
   }
 
@@ -70,15 +70,13 @@ onButtonSubmit = () => {
         />
         <Navigation/>
         {this.state.route === 'signin'
-        ? <SignIn onRouteChange={this.onRouteChange}/>
-        : <div>
-            <Logo/>
-            <Rank/>
-            <ImageLinkForm onInputChange={this.onInputChange} 
-                        onButtonSubmit={this.onButtonSubmit} 
-                        />
-            <FaceRecognition box={box} imageUrl={imageUrl}/>
-          </div>        
+        ? <SignIn/>
+        : <Logo/>
+          <Rank/>
+        <ImageLinkForm onInputChange={this.onInputChange} 
+                      onButtonSubmit={this.onButtonSubmit} 
+                      />
+        <FaceRecognition box={box} imageUrl={imageUrl}/>
         }
       </div>
     );

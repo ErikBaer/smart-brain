@@ -70,7 +70,7 @@ onButtonSubmit = () => {
         />
         <Navigation/>
         {this.state.route === 'signin'
-        ? <SignIn onRouteChange={this.onRouteChange}/>
+        ? <SignIn/>
         : <div>
             <Logo/>
             <Rank/>
