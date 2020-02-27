@@ -19,20 +19,8 @@ class SignIn extends React.Component{
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3001/signin', {
-      method: 'post',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        email: this.state.signInEmail,
-        password: this.state.signInPassword
-    })
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data === "success") {
-        this.props.onRouteChange('home');
-      }
-    })
+    console.log(this.state);
+    this.props.onRouteChange('home');
   }
 
   render () {
@@ -57,9 +45,7 @@ class SignIn extends React.Component{
                 <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
                 type="text" 
                 name="Password"  
-                id="password"
-                onChange = {this.onPasswordChange}
-                />
+                id="password"/>
               </div> 
             </fieldset>
             <div>

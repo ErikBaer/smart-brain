@@ -22,17 +22,10 @@ class SignIn extends React.Component{
     fetch('http://localhost:3001/signin', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        email: this.state.signInEmail,
-        password: this.state.signInPassword
+      body: 
     })
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data === "success") {
-        this.props.onRouteChange('home');
-      }
-    })
+    console.log(this.state);
+    this.props.onRouteChange('home');
   }
 
   render () {
