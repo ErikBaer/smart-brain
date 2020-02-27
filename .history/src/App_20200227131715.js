@@ -86,21 +86,15 @@ onButtonSubmit = () => {
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", 
   this.state.input)
   .then(response => {
-
     if(response) {
       fetch('http://localhost:3001/image', {
         method: 'put',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
           id:this.state.user.id
-        })
       })
-      .then(response => response.json())
-      .then(count => {
-        this.setState(Object.assign(this.state.user,{entries: count}) )
-        })
-      }
-
+    })
+    }
    return this.displayBox(this.calculateFaceLocation(response))
   })
   .catch(err => console.log(err, 'OOps'))

@@ -97,9 +97,11 @@ onButtonSubmit = () => {
       })
       .then(response => response.json())
       .then(count => {
-        this.setState(Object.assign(this.state.user,{entries: count}) )
-        })
-      }
+        this.setState(Object.assign(this.state.user, )
+        }})
+      })
+    
+    }
 
    return this.displayBox(this.calculateFaceLocation(response))
   })
