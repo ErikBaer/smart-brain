@@ -2,19 +2,19 @@ import React from 'react';
 // import './Register.css';
 
 class Register extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: '',
-      name: ''
+      name:'',
+      email:'',
+      password:''
     }
   }
 
   onNameChange = (event) => {
     this.setState({name:event.target.value})
   }
+
 
   onEmailChange = (event) => {
     this.setState({email:event.target.value})
@@ -41,7 +41,9 @@ class Register extends React.Component {
     })
   }
 
-  render() {
+  render (){
+
+    const {onRouteChange} = this.state;
     return (
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw5 shadow-5 center">
         <main className="pa4 black-80">
@@ -50,29 +52,40 @@ class Register extends React.Component {
               <legend className="f2 fw6 ph0 mh0">Register</legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
-                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="name"  id="name"/>
+                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                type="text" 
+                name="name"  
+                id="name"/>
               </div>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address"/>
+                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                type="email" 
+                name="email-address"  
+                id="email-address"
+                  onChange=this.o
+                />
               </div>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Password</label>
-                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="Password"  id="password"/>
+                <input className="email pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                type="text" 
+                name="Password"  
+                id="password"/>
               </div> 
             </fieldset>
             <div>
               <input 
-              onClick={() => onRouteChange('home')}
-              className="b ph3 pv2 input-reset ba b--black bg-light-red grow pointer f6 dib" type="submit" value="Register"/>
+              className="b ph3 pv2 input-reset ba b--black bg-light-red grow pointer f6 dib" 
+              type="submit" 
+              value="Register"/>
             </div>
           </div>
         </main>
       </article>
       
     );
-  }
-    
+}
 }
 
 export default Register;
