@@ -35,7 +35,7 @@ class App extends Component {
     }
   }
 
-  loadUser = (data) => { //would user :data also work ?
+  loadUser = (data) => {
     this.setState({user: {
       id:data.id,
         name:data.name,
@@ -112,7 +112,7 @@ onButtonSubmit = () => {
           : (
             route === 'signin'
             ? <SignIn onRouteChange={this.onRouteChange}/>        
-            : <Register onRouteChange= {this.onRouteChange} loadUser= {this.loadUser}/>
+            : <Register onRouteChange= {this.onRouteChange}/>
           )
         }
       </div>

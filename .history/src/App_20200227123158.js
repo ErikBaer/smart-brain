@@ -35,16 +35,15 @@ class App extends Component {
     }
   }
 
-  loadUser = (data) => { //would user :data also work ?
-    this.setState({user: {
-      id:data.id,
-        name:data.name,
-        email: data.email,
-        password: data.password,
-        entries: data.entries,
-        joined: data.joined
-    } 
-    } )
+  loadUser = (data) => {
+    this.setState(user: {
+      id:user,
+        name:user,
+        email: user,
+        password: user,
+        entries: user,
+        joined: user
+    })
   }
 
   calculateFaceLocation = (data) => {
@@ -112,7 +111,7 @@ onButtonSubmit = () => {
           : (
             route === 'signin'
             ? <SignIn onRouteChange={this.onRouteChange}/>        
-            : <Register onRouteChange= {this.onRouteChange} loadUser= {this.loadUser}/>
+            : <Register onRouteChange= {this.onRouteChange}/>
           )
         }
       </div>
