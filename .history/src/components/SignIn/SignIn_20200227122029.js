@@ -17,15 +17,15 @@ class SignIn extends React.Component{
   onPasswordChange = (event) => {
     this.setState({signInPassword:event.target.value})
   }
-  
 
-  onSubmitSignIn = () => {
-    fetch('http://localhost:3001/signin', {
+  onSubmitRegister = () => {
+    fetch('http://localhost:3001/register', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
-        email: this.state.signInEmail,
-        password: this.state.signInPassword
+        email: this.state.email,
+        password: this.state.password,
+        name : this.state.name
     })
   })
     .then(response => response.json())
@@ -37,6 +37,7 @@ class SignIn extends React.Component{
   }
 
   render () {
+    const {onRouteChange} =this.props;
     return (
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw5 shadow-5 center">
         <main className="pa4 black-80">
