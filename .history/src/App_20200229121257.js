@@ -102,7 +102,6 @@ onButtonSubmit = () => {
       .then(count => {
         this.setState(Object.assign(this.state.user,{entries: count}) )
         })
-      .catch(err => console.log(err))
       }
 
    return this.displayBox(this.calculateFaceLocation(response))

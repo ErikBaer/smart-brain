@@ -74,7 +74,7 @@ onInputChange = (event) => {
 
 onRouteChange = (route) => {
   if (route==='signout') {
-    this.setState(initialState)
+    this.setState({initialState})
   } else if (route === 'home') {
     this.setState({isSignedIn: true})
   }
@@ -102,7 +102,6 @@ onButtonSubmit = () => {
       .then(count => {
         this.setState(Object.assign(this.state.user,{entries: count}) )
         })
-      .catch(err => console.log(err))
       }
 
    return this.displayBox(this.calculateFaceLocation(response))
