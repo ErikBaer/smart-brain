@@ -13,9 +13,6 @@
     "react-scripts": "3.4.0",
     "react-tilt": "^0.1.4"
   },
-  "engines": {
-    "node": "12.13.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
