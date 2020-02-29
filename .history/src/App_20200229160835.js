@@ -81,7 +81,7 @@ onButtonSubmit = () => {
   
   this.setState({imageUrl:this.state.input});
   //get API-answer back from server
-  fetch('http://https://sleepy-retreat-45021.herokuapp.com/imageurl', {
+  fetch('http://localhost:3001/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -93,7 +93,7 @@ onButtonSubmit = () => {
   .then(response => {
 
     if(response) {
-      fetch('http://https://sleepy-retreat-45021.herokuapp.com:3000/image', {
+      fetch('http://localhost:3001/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
