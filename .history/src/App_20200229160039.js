@@ -80,7 +80,6 @@ onRouteChange = (route) => {
 onButtonSubmit = () => {
   
   this.setState({imageUrl:this.state.input});
-  
   fetch('http://localhost:3001/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},

@@ -10,6 +10,10 @@ import SignIn from './components/SignIn/SignIn';
 import Particles from 'react-particles-js';
 import particlesOptions from './particlesjs-config';
 
+const app = new Clarifai.App({
+  apiKey: 'f7738781c1e0443593a11eec5113e608'
+ });
+
 const initialState = {
     input:'',
     imageUrl:'',
@@ -80,15 +84,13 @@ onRouteChange = (route) => {
 onButtonSubmit = () => {
   
   this.setState({imageUrl:this.state.input});
-  
   fetch('http://localhost:3001/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          input:this.state.input
+          id:this.state.user.id
         })
-  })
-  .then (response => response.json())
+
   
   .then(response => {
 
