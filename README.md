@@ -8,9 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-You can find a working Demo under: https://sleepy-retreat-45021.herokuapp.com/
+You can find a working Demo under: https://smart-brain-baerdata.herokuapp.com/
 
-Just register under a generic username, upload an image and feel the magic.
+Just register under a generic username or sign in as admin / admin, 
+upload an image and feel the magic.
 
 ## Local Test
 
