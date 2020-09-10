@@ -1,3 +1,9 @@
+# smart-brain-frontend
+Full-Stack Application implementing advanced image recognition via the clarify.ai api. Written in React, Node.js and PostgresSQL- API
+
+Api: https://github.com/ErikBaer/smart-brain-api
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
