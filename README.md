@@ -6,6 +6,15 @@ Api: https://github.com/ErikBaer/smart-brain-api
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+
+You can find a working Demo under: https://sleepy-retreat-45021.herokuapp.com/
+
+Just register under a generic username, upload an image and feel the magic.
+
+## Local Test
+
+
 ## Available Scripts
 
 In the project directory, you can run:
